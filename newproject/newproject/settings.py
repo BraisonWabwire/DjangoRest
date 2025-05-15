@@ -140,3 +140,11 @@ DATABASES = {
         'PORT': '3306',            # default port for PostgreSQL
     }
 }
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
