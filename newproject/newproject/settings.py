@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL='api.User'
+
+
+# settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # or 'mysql', 'sqlite3', etc.
+        'NAME': 'djangorest',
+        'USER': 'root',
+        'PASSWORD': '@Wabwire7627',
+        'HOST': 'localhost',       # or an IP address like '127.0.0.1'
+        'PORT': '3306',            # default port for PostgreSQL
+    }
+}
